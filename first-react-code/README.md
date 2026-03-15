@@ -1,16 +1,31 @@
-# React + Vite
+# ReactFacts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple static React application that displays fun facts about React. This project is a foundational exercise from the Scrimba React course.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project consists of:
+- `App.jsx` and `main.jsx`: The React entry point and main layout.
+- `Navbar.jsx`: Displays the top navigation branding.
+- `Main.jsx`: Contains the main content block detailing facts about React.
+- `ReactLogo.jsx`: An inline SVG component used for the logo.
 
-## React Compiler
+## Setup and Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Open your browser and navigate to the local server address provided by Vite (e.g., http://localhost:5173).
+
+## Built With
+
+- [React](https://reactjs.org/) (v19)
+- [Vite](https://vitejs.dev/)
+- Vanilla CSS

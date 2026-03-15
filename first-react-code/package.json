@@ -2,6 +2,7 @@
   "name": "first-react-code",
   "private": true,
   "version": "0.0.0",
+  "description": "A simple static React facts app from Scrimba",
   "type": "module",
   "scripts": {
     "dev": "vite",
