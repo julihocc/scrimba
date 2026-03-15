@@ -1,14 +1,20 @@
+import { ReactLogo } from "./ReactLogo"
+
 export function Main() {
     return (
         <main className="main">
-            <h1>Fun facts about React</h1>
-            <ul className="facts-list">
-                <li>Was first released in 2013</li>
-                <li>Was originally created by Jordan Walke</li>
-                <li>Has well over 100K stars on GitHub</li>
-                <li>Is maintained by Meta</li>
-                <li>Powers thousands of enterprise apps, including mobile apps</li>
-            </ul>
+            <ReactLogo className="main-watermark" />
+
+            <div className="main-content">
+                <h1>Fun facts about React</h1>
+                <ul className="facts-list">
+                    <li>Was first released in 2013</li>
+                    <li>Was originally created by Jordan Walke</li>
+                    <li>Has well over 100K stars on GitHub</li>
+                    <li>Is maintained by Meta</li>
+                    <li>Powers thousands of enterprise apps, including mobile apps</li>
+                </ul>
+            </div>
         </main>
     )
 }

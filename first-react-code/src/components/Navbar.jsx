@@ -1,12 +1,14 @@
-import reactLogo from "../assets/react.svg"
+import { ReactLogo } from "./ReactLogo"
 
 export function Navbar() {
     return (
-<header>
-    <nav className="nav">
-        <img src={reactLogo} alt="React Logo" className="nav-logo" />
-        <h1 className="nav-logo-text">ReactFacts</h1>
-    </nav>
-</header>
+        <header>
+            <nav className="nav">
+                <div className="nav-brand">
+                    <ReactLogo className="nav-logo" />
+                    <h3 className="nav-logo-text">ReactFacts</h3>
+                </div>
+            </nav>
+        </header>
     )
 }

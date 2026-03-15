@@ -7,11 +7,14 @@
   --navbar-bg: #21222a;
   --main-bg: #282d35;
   --react-blue: #61dafb;
+  --watermark: #33373e;
 }
 
 .app {
   min-height: 100vh;
   background: var(--main-bg);
+  display: flex;
+  flex-direction: column;
 }
 
 .nav {
@@ -22,21 +25,30 @@
   padding: 25px 30px;
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .nav-logo {
-  width: auto;
-  height: 30px;
-  margin-right: 12px;
+  width: 32px;
+  height: 32px;
+  color: var(--react-blue);
 }
 
 .nav-logo-text {
   margin: 0;
   font-size: 22px;
   font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
   color: var(--react-blue);
 }
 
 .main {
   position: relative;
+  flex: 1;
   min-height: calc(100vh - var(--navbar-height));
   padding: 50px 30px;
   background: var(--main-bg);
@@ -44,21 +56,21 @@
   overflow: hidden;
 }
 
-.main::after {
-  content: "";
+.main-watermark {
   position: absolute;
-  inset: 0;
-  background-image: url("./assets/react.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 320px;
-  opacity: 0.1;
+  right: -110px;
+  top: 50%;
+  width: 350px;
+  height: 350px;
+  transform: translateY(-50%);
+  color: var(--watermark);
   pointer-events: none;
 }
 
-.main > * {
+.main-content {
   position: relative;
   z-index: 1;
+  max-width: 680px;
 }
 
 .main h1 {
@@ -70,13 +82,15 @@
 }
 
 .facts-list {
+  list-style: disc;
   margin: 0;
   max-width: 400px;
-  padding-left: 28px;
+  padding-left: 30px;
 }
 
 .facts-list li {
   margin-bottom: 20px;
+  padding-left: 6px;
   color: #ffffff;
   font-size: 16px;
   line-height: 1.5;
@@ -97,6 +111,7 @@
   }
 
   .nav-logo {
+    width: 28px;
     height: 28px;
   }
 
@@ -108,9 +123,10 @@
     padding: 40px 20px;
   }
 
-  .main::after {
-    background-size: 220px;
-    background-position: right -60px center;
+  .main-watermark {
+    right: -90px;
+    width: 240px;
+    height: 240px;
   }
 
   .main h1 {
