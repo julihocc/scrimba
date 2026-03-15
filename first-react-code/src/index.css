@@ -5,3 +5,7 @@ body,
   padding: 0;
   height: 100%;
 }
+
+body {
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

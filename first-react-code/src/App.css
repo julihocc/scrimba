@@ -2,48 +2,118 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Inter, "Sagoe UI", "Helvetica Neue", Arial, sans-serif;
-  background: #282d35;
-  color: #fff;
+:root {
+  --navbar-height: 72px;
+  --navbar-bg: #21222a;
+  --main-bg: #282d35;
+  --react-blue: #61dafb;
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--main-bg);
 }
 
 .nav {
-  height: 90px;
-  background: #212222;
+  height: var(--navbar-height);
+  background: var(--navbar-bg);
   display: flex;
   align-items: center;
-  padding: 0 28px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 28);
+  padding: 25px 30px;
 }
 
 .nav-logo {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
+  width: auto;
+  height: 30px;
+  margin-right: 12px;
 }
 
 .nav-logo-text {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 22px;
   font-weight: 700;
-  letter-spacing: -0.04em;
-  color: #61dafb;
+  color: var(--react-blue);
+}
+
+.main {
+  position: relative;
+  min-height: calc(100vh - var(--navbar-height));
+  padding: 50px 30px;
+  background: var(--main-bg);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/react.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 320px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.main > * {
+  position: relative;
+  z-index: 1;
+}
+
+.main h1 {
+  margin: 0 0 40px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.facts-list {
+  margin: 0;
+  max-width: 400px;
+  padding-left: 28px;
+}
+
+.facts-list li {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.facts-list li::marker {
+  color: var(--react-blue);
+  font-size: 1.35em;
 }
 
 @media (max-width: 480px) {
+  :root {
+    --navbar-height: 64px;
+  }
+
   .nav {
-    height: 76px;
-    padding: 0 18px;
+    padding: 18px;
   }
 
   .nav-logo {
-    width: 28px;
     height: 28px;
   }
 
   .nav-logo-text {
-    font-size: 1.2rem;
+    font-size: 20px;
+  }
+
+  .main {
+    padding: 40px 20px;
+  }
+
+  .main::after {
+    background-size: 220px;
+    background-position: right -60px center;
+  }
+
+  .main h1 {
+    font-size: 34px;
   }
 }
